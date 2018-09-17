@@ -105,7 +105,7 @@ function create_key() {
     then
     echo -e "${RED}Wallet not fully loaded. Let us wait and try again to generate the Private Key${NC}"
     sleep 30
-    COINKEY=$($COIN_PATH$COIN_CLI masternode genkey | jq -r '." Secret key "'))
+    COINKEY=$($COIN_PATH$COIN_CLI masternode genkey | jq -r '." Secret key "')
   fi
   $COIN_PATH$COIN_CLI stop
 fi
